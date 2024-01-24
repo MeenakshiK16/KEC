@@ -1,0 +1,448 @@
+VARIABLES:
+
+*Variable name can contain numbers,digits and characters.
+*Variable name should start with letters.
+*It can start with $,_
+*Names are case sensitive.
+*Keywords cannot be used.
+*variable name should not contain any space.
+
+Names should be in camel case,Ex:fullStackDev
+variable name length should be 16.
+
+Variables can be declared in four ways:
+*Automatically
+*using var
+*using let
+*using const
+------------------------
+example workout:
+x=5
+5
+y=6
+6
+z=x+y
+11
+var x=5
+undefined
+var y=5
+undefined
+z=x+y
+10
+let y=7
+undefined
+let x=5
+undefined
+let z=x+y
+undefined
+z
+12
+const a=6;const b=4;const c=a+b;
+undefined
+c
+10
+------------------------
+*always use const if the value should not be changed.
+*always use const if the type should not be changed(arrays & objects).
+*Only use let if you can't use const.
+*var if you must support old browser. 
+---------------------------------------
+let x=7
+undefined
+x
+7
+let t=7.5
+undefined
+t
+7.5
+let t='7.5'
+undefined
+t
+'7.5'
+let t="7.5"
+undefined
+t
+'7.5'
+let x=true
+undefined
+x
+true
+let t="7.5"+3
+undefined
+t
+'7.53'
+let s=3+7+"7.5"
+undefined
+s
+'107.5'
+let s=7%3*2
+undefined
+s
+2
+let s=7/3*2
+undefined
+s
+4.666666666666667
+------------------------------
+let b1=BigInt(89796979589696)
+undefined
+b1
+89796979589696n
+let b1=89796979589696
+undefined
+b1
+89796979589696
+let b1=89796979589696n
+undefined
+b1
+89796979589696n
+-------------------
+*A variable without a value has the value undefined
+let car;
+undefined
+car
+*Any variable can be emptified by setting the value to undefined
+car="Skoda"
+'Skoda'
+car=undefined;
+undefined
+car
+undefined
+-------------
+let x="";let y=null;
+undefined
+x
+''
+y
+null
+car
+undefined
+------------------
+*It is useful for creating appliction programming interface
+when you want to assign a unique identifier to an object
+const mysymbol= Symbol();
+undefined
+mysymbol
+Symbol()
+---------------------
+typeof
+
+typeof 5
+'number'
+typeof ''
+'string'
+typeof ""
+'string'
+typeof undefined
+'undefined'
+typeof null
+'object'
+--------------------------------
+const person ={firstName:"vijay",lastName:"joseph"}
+undefined
+person
+{firstName: 'vijay', lastName: 'joseph'}firstName: "vijay"lastName: "joseph"[[Prototype]]: Object
+person.firstName
+'vijay'
+person.lastName
+'joseph'
+person.firstName="ajith"
+'ajith'
+person
+{firstName: 'ajith', lastName: 'joseph'}
+typeof person
+'object'
+typeof person.firstName
+'string'
+person[firstName]
+not defined
+person['firstName']
+'ajith'
+-------------------------------
+OPERATORS:
+
+*Arithmetic operator + - * / %
+*Assignment operator =
+*Bitwise operator
+5- 0101
+1-0001
+& 0001
+| 0101
+^ 0100
+
+5<<1
+5-0101
+  1010
+5>>1
+5-0101
+  010 
+5- 0000 0000 0000 0101
+*Logical operator- && || !
+4<5 && 3>1
+true
+3<6 || 5>8
+true
+9<6 || 5>3
+true
+!5
+false
+!0
+true
+!0.1
+false
+!0.0
+true
+*Ternary operator 
+4<5?true:false
+*Relational operator-< > <= >= == !=
+2>3
+false
+4<5
+true
+4>=5
+false
+6<=7
+true
+4==4
+true
+4!=2
+true
+
+*Type Operators
+typeof - return type of a variable
+instanceof - returns true if an object is an instance of an object type 
+-----------------------------------------------------------------------
+const cars=["BMW","Audi","tata"];
+undefined
+cars
+(3) ['BMW', 'Audi', 'tata']0: "BMW"1: "Audi"2: "tata"length: 3[[Prototype]]: Array(0)
+const actors=[]
+undefined
+actors[0] = "rajini"
+'rajini'
+actors[1]="kamal"
+'kamal'
+actors[2]="ajith"
+'ajith'
+actors[3]="str"
+'str'
+const cars=new array("BMW","Audi","tata");
+['BMW','Audi','tata']
+cars[2] = "benz"
+'benz'
+['BMW','Audi','benz']
+cars[3] ="tata"
+'tata'
+cars
+['BMW','Audi','benz','tata']
+------------------------------------
+IF statement
+
+let age=20;
+undefined
+if(age>=18){
+    console.log("can vote")
+}
+can vote
+---------------------------
+IF else statement
+let age =10;
+undefined
+if(age>=18){
+    console.log("can vote")
+}
+else{
+    console.log("cannot vote")
+}
+
+ cannot vote
+--------------------------------
+SWITCH CASE:
+let day=2;
+switch(day)
+    {
+        case 0:
+              console.log("sunday")
+                break;
+        case 1:
+                console.log("Monday")
+                break;
+        case 2:
+                console.log("Tuesday")
+                break;
+        case 3:
+                console.log("Wednesday")
+                break;
+        default:
+                console.log("looking for an weekend")
+        }
+
+ Tuesday
+---------------------------------
+PRINT NUMBERS FROM 0 TO 5:
+text="";
+for(let i=0;i<=5;i++){
+    text += i+" ";
+}
+'0 1 2 3 4 5 '
+-----------------------------------
+text=''
+''
+for (let x in person)
+    text+=person[x];
+'MeenuKarthik19'
+for(let x in person)
+    text+=person[x]+" ";
+'MeenuKarthik19Meenu Karthik 19 '
+text="";for(let x in person)
+text+=person[x]+" ";
+'Meenu Karthik 19 '
+------------------------------------------
+WHILE:
+let x = 0,text="";
+while(x<=5){
+    text += x + " ";
+    x++;
+}text;
+'0 1 2 3 4 5 '
+
+DO WHILE:
+let x = 0,text="";
+do{
+    text += x+ " ";
+    x++;
+}while(x<=5)text;
+'0 1 2 3 4 5 '
+----------------------------
+let x = 0,text="";
+do{
+    text += x+ " ";
+    x++;
+}while(x<=5)x;
+6
+--------------------------------
+MAPPING:
+
+Set is used to add the value and update the new value.Also have unique elements.
+
+const map = new Map()
+undefined
+map.set("EEE",32);
+Map(1) {'EEE' => 32}
+map.set("EIE",11);
+Map(2) {'EEE' => 32, 'EIE' => 11}
+map.set("civil",15);
+Map(3) {'EEE' => 32, 'EIE' => 11, 'civil' => 15}
+map.set("EEE",18);
+Map(3) {'EEE' => 18, 'EIE' => 11, 'civil' => 15}
+
+get displays the value of it
+map.get("EEE");
+18
+delete deletes the particular thing
+map.delete("EEE")
+true//deleted
+map.delete("EEE");
+false//it has already been deleted
+map.get("EEE");
+undefined
+map.has("EIE")
+true//available
+map.has("EEE")
+false//not available
+----------------------------------------------------
+Using forEach
+map.forEach(function(value,key){
+    console.log(value+" "+key)
+})
+ 16 EIE
+ 32 civil
+------------------------------
+for(const x of map.entries())
+    {
+       console.log(x)
+    }
+    ['EIE',16]
+------------------------------
+const m= new Map(["mech",1],["civil",4],["auto",10])
+VM1968:1 Uncaught TypeError: Iterator value mech is not an entry object
+    at new Map (<anonymous>)
+    at <anonymous>:1:10
+
+const m=new Map([["mech",1],["civil",4],["auto",10]])
+undefined
+m
+Map(3) {'mech' => 1, 'civil' => 4, 'auto' => 10}
+-----------------------------------------
+EMPTY SET & adding elements to it:
+const set=new Set();
+undefined
+set
+Set(0) {size: 0}
+set.add("dog");
+Set(1) {'dog'}
+set.add("cat")
+Set(2) {'dog', 'cat'}
+set.add("elephant")
+Set(3) {'dog', 'cat', 'elephant'}
+set.add("cat")
+Set(3) {'dog', 'cat', 'elephant'}
+
+Once the element is added then it cannot be added again further. 
+
+set.delete("cat")
+true
+set.has("cat")
+false
+-----------------------------------------------
+function mul(a,b)
+{
+    return(a*b);
+}
+undefined
+mul(4,3)
+12
+------------------------------
+function greetingAfterSometime(name,callback){
+    setTimeout(
+        function(){
+        console.log("Hello"+name+" ");
+        callback();
+    },2000
+    );
+}
+function sayBye(){
+    console.log("Goodbye");
+}
+greetingAfterSometime("dude",sayBye);
+undefined
+
+Hellodude 
+Goodbye
+-------------------------------------
+function isAuthorized(){
+    return Math.random()>0.5;
+}
+function checkAuthorization(){
+    return new Promise(function(resolve,reject){
+setTimeout(function(){
+    if(isAuthorized()){
+        resolve("Authorized");
+    }else{
+        reject("unAuthorized");
+    }},1000);
+    });
+} checkAuthorization().then(function(message){
+    console.log(message);}).catch(function(error){
+    console.error(error);});
+Promise {<pending>}
+
+unAuthorized
+------------------------------------------
+
+
+
+
+
+
+
